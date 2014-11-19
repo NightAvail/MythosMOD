@@ -1,99 +1,83 @@
-850.1.1={
-	liege="d_samogitia"
+750.1.1 = {
+	holder = 194113
+	liege = d_lithuanians
 }
-850.1.1=
-{
-holder=82141
+799.1.1 = {
+	holder = 194114
 }
-867.1.2=
-{
-holder=268287
+822.1.1 = {
+	holder = 194115
 }
-890.1.1=
-{
-holder=82149
+850.1.1 = {
+	holder=268287
+	liege = "d_samogitia"
 }
-910.1.1=
-{
-holder=82150
+850.1.1 = {
+holder = 82141
 }
-930.1.1=
-{
-holder=82146 #Borkus son of Palemon
+890.1.1 = {
+holder = 82149
 }
-938.1.1=
-{
-holder=82153 #Gimbutas son of Kunos
+910.1.1 = {
+holder = 82150
 }
-962.1.1=
-{
-holder=82166 #Montvilas son of Gimbutas
+930.1.1 = {
+holder = 82146 #Borkus son of Palemon
 }
-989.1.1=
-{
-holder=82170 #Vykintas son of Montvilas
+938.1.1 = {
+holder = 82153 #Gimbutas son of Kunos
 }
-1023.1.1=
-{
-holder=82175 #Zivinbudas son of Vykintas
+962.1.1 = {
+holder = 82166 #Montvilas son of Gimbutas
 }
-1064.1.1=
-{
-holder=82180 #Kukovaitis son of Zivinbudas
+989.1.1 = {
+holder = 82170 #Vykintas son of Montvilas
 }
-1088.1.1=
-{
-holder=82182 #Šventaragis son of Utenis
+1023.1.1 = {
+holder = 82175 #Zivinbudas son of Vykintas
 }
-1093.1.1=
-{
-holder=82200 #Skirmantas son of Šventaragis
+1064.1.1 = {
+holder = 82180 #Kukovaitis son of Zivinbudas
 }
-1124.1.1=
-{
-holder=82204 #Trabus son of Skirmantas
+1088.1.1 = {
+holder = 82182 #ï¿½ventaragis son of Utenis
 }
-1169.1.1=
-{
-holder=82198 #Algimantas son of Liubartas
+1093.1.1 = {
+holder = 82200 #Skirmantas son of ï¿½ventaragis
 }
-1238.1.1=
-{
-holder=125301 #Mindaugas son of Rimgaudas
+1124.1.1 = {
+holder = 82204 #Trabus son of Skirmantas
 }
-1263.9.12=
-{
-holder=125302
+1169.1.1 = {
+holder = 82198 #Algimantas son of Liubartas
 }
-1264.1.2=
-{
-holder=125303
+1238.1.1 = {
+holder = 125301 #Mindaugas son of Rimgaudas
 }
-1267.4.23=
-{
-holder=125122
+1263.9.12 = {
+holder = 125302
 }
-1269.1.2=
-{
-holder=125310
+1264.1.2 = {
+holder = 125303
 }
-1282.1.2=
-{
-holder=125311
+1267.4.23 = {
+holder = 125122
 }
-1285.1.2=
-{
-holder=125314
+1269.1.2 = {
+holder = 125310
 }
-1291.1.2=
-{
-holder=472352
+1282.1.2 = {
+holder = 125311
 }
-1295.1.2=
-{
-holder=125315
+1285.1.2 = {
+holder = 125314
 }
-1316.1.1=
-{
-holder=473500
+1291.1.2 = {
+holder = 472352
+}
+1295.1.2 = {
+holder = 125315
+}
+1316.1.1 = {
+holder = 473500
 }

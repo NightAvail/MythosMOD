@@ -6,7 +6,6 @@ title = c_dyfed
 # Settlements
 max_settlements = 4
 b_dinefwr = castle
-b_penfro = castle
 b_st_davids = temple
 b_carmarthen = city
 
@@ -23,8 +22,12 @@ terrain = hills
 
 # History
 
+769.1.1 = { religion = druidic }
 867.1.2 = { religion = druidic }
 867.1.5 = { religion = druidic }
-1100.1.1 = { b_pembroke = castle }
-1100.1.1 = { capital = b_pembroke } 
-1100.1.1 = { remove_settlement = b_dinefwr } 
+
+1100.1.1 = {
+	b_kidwelly = castle
+	capital = b_kidwelly
+	remove_settlement = b_dinefwr
+}

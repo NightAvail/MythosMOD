@@ -20,10 +20,12 @@ b_ursova = temple
 
 # Misc
 culture = romanian
-religion = orthodox
+religion = slavic_pagan
 
 # History
-867.1.2 = { religion = satanist }
-890.1.1 = { religion = orthodox }
+870.1.1 = {
+	religion = orthodox
+}
 
-
+#867.1.2 = { religion = satanist }
+#890.1.1 = { religion = orthodox }
