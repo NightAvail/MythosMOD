@@ -1189,6 +1189,8 @@ province_event = {
 			trait = proud
 			trait = zealous
 			trait = brave
+
+			immortal = yes
 			give_nickname = nick_ozymandias
 		}
 

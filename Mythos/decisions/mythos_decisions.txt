@@ -666,10 +666,7 @@ vassal_decisions = {
 	vampire_interact_ghouls = {
 		is_high_prio = yes
 		from_potential = {
-			OR = {
-				trait = vampire
-				trait = djinn		# Djinns are powerful beings of magic
-			}
+			trait = vampire
 
 			OR = {
 				has_character_flag = flag_vampire_ghoul_menu_open
@@ -693,10 +690,8 @@ vassal_decisions = {
 	vampire_visits_dungeon = {
 		#is_high_prio = yes
 		from_potential = {
-			OR = {
-				trait = vampire
-				trait = djinn		# Djinns are powerful beings of magic
-			}
+			trait = vampire
+
 			#OR = {
 			#	ai = yes
 			#	has_character_flag = flag_vampire_dungeon_menu_open
@@ -745,10 +740,7 @@ vassal_decisions = {
 	}
 	turn_prisoner_werewolf = {
 		from_potential = {
-			OR = {
-				trait = werewolf
-				trait = djinn 		# Djinns are powerful beings of magic
-			}
+			trait = werewolf
 		}
 
 		potential = {
@@ -797,4 +789,45 @@ vassal_decisions = {
 		}
 	}
 
+	# Djinn can turn child into djinn.
+	djinn_make_child_djinn = {
+		from_potential = {
+			trait = djinn
+		}
+
+		# Potential conditions
+		potential = {
+			OR = {
+				father = { character = FROM }
+				mother = { character = FROM }
+				#is_main_spouse = yes
+			}
+
+			NOT = { trait = vampire }
+			NOT = { trait = werewolf }
+			NOT = { trait = djinn }
+
+			liege = { character = FROM }
+		}
+
+		# What is required by user.
+		allow = {
+		}
+
+		effect = {
+			add_trait = djinn
+			prisoner = no
+			FROM = {
+				prestige = 50
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }
