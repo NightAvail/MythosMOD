@@ -1552,6 +1552,8 @@ character_event = {
 		}
 	}
 }
+
+# Djinn must be of a mage education.
 character_event = {
 	id = "MYTH.31"
 	desc = "EVTDESCMYTH.31"
@@ -1632,6 +1634,7 @@ character_event = {
 		}
 	}
 }
+
 character_event = {
 	id = "MYTH.32"
 	desc = "EVTDESCMYTH.32"
@@ -4328,5 +4331,77 @@ character_event = {
 	option = {
 		name = "EVTOPTAMYTH.92"
 		remove_trait = immortal
+	}
+}
+
+# Player Djinn's will increase in their education over a long
+# period of time.
+character_event = {
+	id = "MYTH.92a"
+	desc = "EVTDESCMYTH.92"
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_war
+	ai = no
+
+	trigger = {
+		AND = {
+			trait = djinn
+			trait = novice_mage
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3600
+	}
+
+	option = {
+		name = "EVTOPTAMYTH.92"
+		add_trait = eldritch_scholar
+	}
+}
+character_event = {
+	id = "MYTH.92b"
+	desc = "EVTDESCMYTH.92"
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_war
+	ai = no
+
+	trigger = {
+		AND = {
+			trait = djinn
+			trait = eldritch_scholar
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3600
+	}
+
+	option = {
+		name = "EVTOPTAMYTH.92"
+		add_trait = veteran_wizard
+	}
+}
+character_event = {
+	id = "MYTH.92c"
+	desc = "EVTDESCMYTH.92"
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_war
+	ai = no
+
+	trigger = {
+		AND = {
+			trait = djinn
+			trait = veteran_wizard
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3600
+	}
+
+	option = {
+		name = "EVTOPTAMYTH.92"
+		add_trait = arcane_master
 	}
 }

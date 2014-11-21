@@ -651,6 +651,18 @@ decisions = {
 }
 
 vassal_decisions = {
+	# Djinn grants immortality to subject
+	# (Too powerful???)
+	#djinn_grant_immortality = {
+	#	from_potential = {
+	#		AND = {
+	#			ai = no
+	#			trait = djinn
+	#		}
+	#	}
+	#}
+	# End Djinn
+
 	vampire_interact_ghouls = {
 		is_high_prio = yes
 		from_potential = {

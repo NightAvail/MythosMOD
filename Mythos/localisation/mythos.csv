@@ -119,8 +119,8 @@ cast_aura;Cast Aura;;;;;;;;;;;;;x
 cast_aura_desc;Cast an aura around yourself to make others more agreeable.;;;;;;;;;;;;;x
 expel_satanists;Expel Satanists;;;;;;;;;;;;;x
 expel_satanists_desc;Purge all satan-worshippers from the realm.;;;;;;;;;;;;;x
-ghoul_without_master;No master;;;;;;;;;;;;;x 
-ghoul_without_master_desc;Has no vampire master;;;;;;;;;;;;;x 
+ghoul_without_master;No master;;;;;;;;;;;;;x
+ghoul_without_master_desc;Has no vampire master;;;;;;;;;;;;;x
 open_vampire_dungeon_menu;Visit the dungeon...;;;;;;;;;;;;;x
 open_vampire_dungeon_menu_desc;Vampire visits the dungeon.;;;;;;;;;;;;;x
 restart_laws;pokus;;;;;;;;;;;;;x
@@ -520,4 +520,7 @@ EVTOPTBMYTH.90;Men are animals.;;;;;;;;;;;;;x
 EVTNAMEMYTH.91;Gain CK2+ immortal trait;;;;;;;;;;;;;x
 EVTDESCMYTH.91;It is good to be immortal!;;;;;;;;;;;;;x
 EVTOPTAMYTH.91;Indeed!;;;;;;;;;;;;;x
+EVTNAMEMYTH.92;Always learning;;;;;;;;;;;;;x
+EVTDESCMYTH.92;Your Djinn knowledge in magic increases as you live your immortal life!;;;;;;;;;;;;;x
+EVTOPTAMYTH.92;I feel more powerful!;;;;;;;;;;;;;x
 OF_TROY;Troy;;;;;;;;;;;;;x
