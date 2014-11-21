@@ -218,7 +218,6 @@ djinn = {
 #EDUCATIONAL TRAITS
 
 novice_mage = {
-	potential = { religion_group = pagan_group }
 	education = yes
 
 	learning = 2
@@ -226,7 +225,6 @@ novice_mage = {
 }
 
 eldritch_scholar = {
-	potential = { religion_group = pagan_group }
 	education = yes
 
 	learning = 3
@@ -239,7 +237,6 @@ eldritch_scholar = {
 }
 
 veteran_wizard = {
-	potential = { religion_group = pagan_group }
 	education = yes
 
 	learning = 6
@@ -252,7 +249,6 @@ veteran_wizard = {
 }
 
 arcane_master = {
-	potential = { religion_group = pagan_group }
 	education = yes
 
 	learning = 10

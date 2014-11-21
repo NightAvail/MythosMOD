@@ -1672,19 +1672,19 @@ character_event = {
 
 	option = {
 		name ="EVTOPTAMYTH.32"
-			remove_trait = ill
-			remove_trait = pneumonic
-			remove_trait = has_tuberculosis
-			remove_trait = has_typhoid_fever
-			remove_trait = has_typhus
-			remove_trait = has_bubonic_plague
-			remove_trait = has_measles
-			remove_trait = has_small_pox
-			remove_trait = infirm
-			remove_trait = wounded
-			remove_trait = maimed
-			remove_trait = syphilitic
-			remove_trait = leper
+		remove_trait = ill
+		remove_trait = pneumonic
+		remove_trait = has_tuberculosis
+		remove_trait = has_typhoid_fever
+		remove_trait = has_typhus
+		remove_trait = has_bubonic_plague
+		remove_trait = has_measles
+		remove_trait = has_small_pox
+		remove_trait = infirm
+		remove_trait = wounded
+		remove_trait = maimed
+		remove_trait = syphilitic
+		remove_trait = leper
 	}
 }
 character_event = {
@@ -3863,7 +3863,12 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		FROM = { trait = vampire }
+		FROM = {
+			OR = {
+				trait = vampire
+				trait = djinn
+			}
+		}
 	}
 
 	immediate = {
