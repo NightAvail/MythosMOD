@@ -4186,7 +4186,7 @@ character_event = {
 	desc = "EVTDESCMYTH.89"
 	picture = GFX_evt_pagan
 
-  is_triggered_only = yes
+  	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
@@ -4215,30 +4215,28 @@ character_event = {
 	desc = "EVTDESCMYTH.90"
 	picture = GFX_evt_bloody_man
 
-
-
 	trigger = {
 		trait = vampire
 		is_ruler = yes
 	}
 
-  mean_time_to_happen = {
-		months = 5
+  	mean_time_to_happen = {
+		months = 3600
 		modifier = {
 			NOT = { trait = cruel }
-			factor = 4
+			factor = 3000
 		}
 		modifier = {
 			trait = kind
-			factor = 4
+			factor = 3000
 		}
 		modifier = {
 			NOT = { trait = wroth }
-			factor = 10
+			factor = 7200
 		}
 		modifier = {
 			NOT = { trait = impaler }
-			factor = 4
+			factor = 3000
 		}
 	}
 
