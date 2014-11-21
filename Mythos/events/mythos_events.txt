@@ -5,12 +5,16 @@ character_event = {
 	desc = "EVTDESCMYTH.1"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
+	# No zombies
+	ai = no
+	is_triggered_only = yes
+
 	trigger = {
 		prisoner = no
 		culture = manden
 	}
-	
+
 	mean_time_to_happen = {
 		months = 10000
 		modifier = {
@@ -18,7 +22,7 @@ character_event = {
 			factor = 2
 		}
 	}
-	
+
 	option = {
 		name = "EVTOPTAMYTH.1"
 		add_trait = zombie
@@ -30,23 +34,26 @@ character_event = {
 	desc = "EVTDESCMYTH.2"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
+	# No zombie
+	ai = no
+
 	trigger = {
 		is_ruler = yes
 		prisoner = no
 		trait = zombie
 		e_zombie = { has_holder = no }
 	}
-	
+
 	mean_time_to_happen = { months = 1 }
-	
+
 	option = {
 		name = "EVTOPTAMYTH.2"
 		set_defacto_liege = ROOT
 		e_zombie = {
 			grant_title = ROOT
 		}
-		
+
 		capital_scope = {
 			tooltip = {
 				ROOT = {
@@ -73,7 +80,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			hidden_tooltip = {
 				create_character = {
 					random_traits = yes
@@ -151,12 +158,16 @@ character_event = {
 	desc = "EVTDESCMYTH.3"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
+	# No zombies
+	ai = no
+	is_triggered_only = yes
+
 	trigger = {
 		trait = zombie
 		NOT = { religion = voodoo }
 	}
-	
+
 	option = {
 		name = "EVTOPTAMYTH.3"
 		religion = voodoo
@@ -171,10 +182,10 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
 
-	
+
 	option = {
 		name = "EVTOPTAMYTH.4"
-		
+
 		capital_scope = {
 			tooltip = {
 				ROOT = {
@@ -220,7 +231,11 @@ character_event = {
 	desc = "EVTDESCMYTH.5"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
+	# No zombies
+	ai = no
+	is_triggered_only = yes
+
 	trigger = {
 		is_ruler = yes
 		trait = zombie
@@ -228,11 +243,11 @@ character_event = {
 		e_zombie = { has_holder = yes }
 		top_liege = {
 			NOT = {
-				has_landed_title = e_zombie 
+				has_landed_title = e_zombie
 			}
 		}
 	}
-	
+
 	option = {
 		name = "EVTOPTAMYTH.5"
 		set_defacto_liege = e_zombie
@@ -244,24 +259,25 @@ character_event = {
 	desc = "EVTDESCMYTH.6"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		OR = {
+				trait = god
 				trait = vampire
-				trait = ghoul
 				trait = werewolf
+				trait = djinn
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 360
-		
+
 		modifier = {
 			factor = 5.0
 			trait = ghoul
 		}
 	}
-	
+
 	option = {
 		name = "EVTOPTAMYTH.6"
 		change_martial = 1
@@ -278,7 +294,7 @@ character_event = {
 	picture = GFX_evt_lovers
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.7"
 		spouse = { add_lover = ROOT}
@@ -290,10 +306,10 @@ character_event = {
 	picture = GFX_evt_lovers
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.8"
-		spouse = { 
+		spouse = {
 			add_trait = homosexual
 		}
 	}
@@ -304,7 +320,7 @@ character_event = {
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.9"
 		scaled_wealth = 3
@@ -316,7 +332,7 @@ character_event = {
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.10"
 		scaled_wealth = -2
@@ -328,7 +344,7 @@ character_event = {
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.11"
 		capital_scope = {
@@ -375,7 +391,7 @@ character_event = {
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.12"
 		hidden_tooltip = {
@@ -392,7 +408,7 @@ character_event = {
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.13"
 		capital_scope = {
@@ -439,11 +455,11 @@ character_event = {
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
 
-	trigger = { 
+	trigger = {
 		graphical_culture = norsegfx
 		NOT = { trait = giant }
 	}
-	
+
 	option = {
 		name = "EVTOPTAMYTH.14"
 		add_trait = giant
@@ -455,15 +471,19 @@ character_event = {
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
 
-	trigger = { 
+	# No zombies
+	ai = no
+	is_triggered_only = yes
+
+	trigger = {
 		top_liege = {
 			trait = zombie
 		}
 		NOT = { trait = zombie }
 	}
-	
+
 	mean_time_to_happen = { months = 3 }
-	
+
 	option = {
 		name = "EVTOPTAMYTH.15"
 		add_trait = zombie
@@ -474,22 +494,22 @@ character_event = {
 	desc = "EVTDESCMYTH.16"
 	picture = GFX_evt_lovers
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		is_married = yes
-		trait = werewolf 
+		trait = werewolf
 		spouse = {
 		NOT = { trait = scarred }
 		}
 	}
-	
+
 	mean_time_to_happen = { months = 60 }
-	
+
 	option = {
 		name = "EVTOPTAMYTH.16"
 		spouse = { add_trait = wounded }
-		hidden_tooltip = { 
-			if = { 
+		hidden_tooltip = {
+			if = {
 				limit = { spouse = { is_female = yes } }
 				impregnate = spouse
 			}
@@ -501,32 +521,32 @@ character_event = {
 	desc = "EVTDESCMYTH.17"
 	picture = GFX_evt_courtiers_talking
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	trigger = {
-	}	
-		
+	}
+
 	option = {
 		name = "EVTOPTAMYTH.17"
 		trigger = {
 			NOT = { FROM = { trait = vampire } }
 			NOT = { FROM = { trait = werewolf } }
 			NOT = { has_character_flag = flag_ghoul_has_master }
-			FROM = { NOT = { check_variable = { which ="ghouls_count" value = 5 } } } 
-		} 
+			FROM = { NOT = { check_variable = { which ="ghouls_count" value = 5 } } }
+		}
 		FROM = { character_event = { id = MYTH.78 } }
 		ai_chance = { factor = 10 }
 	}
 	option = {
-		name = "EVTOPTBMYTH.17"   
+		name = "EVTOPTBMYTH.17"
 		trigger = {
 			NOT { FROM = { trait = vampire } }
 			NOT { FROM = { trait = werewolf } }
 		}
 		piety = -50
-		ai_chance = { 
-			factor = 1 
+		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 200
 				NOT = {       # no heir
@@ -535,16 +555,16 @@ character_event = {
 					}
 				}
 			}
-		}		  
+		}
 		FROM = {
 			character_event = { id = MYTH.84 }
 			prisoner = no
-		}		
-	}      
+		}
+	}
 	option = {
 		name = "EVTOPTCMYTH.17"
-		ai_chance = { factor = 10 }		
-	}	
+		ai_chance = { factor = 10 }
+	}
 }
 province_event = {
 	id = MYTH.18
@@ -566,12 +586,12 @@ province_event = {
 				religion = satanist
 			}
 		}
-		
+
 		NOT = { # Not if there is already an ongoing peasant revolt for this province
 			owner = {
 				top_liege = {
 					war = yes
-					
+
 					any_war = {
 						defender = { character = PREVPREV }
 						OR = {
@@ -599,11 +619,11 @@ province_event = {
 			}
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 720
 	}
-	
+
 	immediate = {
 		create_character = {
 			random_traits = yes
@@ -618,7 +638,7 @@ province_event = {
 			trait = peasant_leader
 			trait = tough_soldier
 		}
-		
+
 		new_character = {
 			create_title = {
 				tier = DUKE
@@ -629,7 +649,7 @@ province_event = {
 				name = "PEASANT_REVOLT"
 				holder = THIS
 			}
-			
+
 			random_list = {
 				17 = {
 					spawn_unit = {
@@ -1004,7 +1024,7 @@ province_event = {
 					}
 				}
 			}
-			
+
 			# DoW on the province top liege
 			ROOT = {
 				owner = {
@@ -1019,7 +1039,7 @@ province_event = {
 				}
 			}
 		}
-		
+
 		owner = {
 			any_liege = { # Inform the lieges
 				limit = {
@@ -1036,7 +1056,7 @@ province_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "EVTOPTAMYTH.18"
 	}
@@ -1047,9 +1067,9 @@ character_event = {
 	desc ="EVTDESCMYTH.19"
 	picture = GFX_evt_peasants
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.19"
 	}
@@ -1059,16 +1079,16 @@ character_event = {
 	desc ="EVTDESCMYTH.20"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		is_ruler = yes
 		NOT = { culture = egyptian }
 		NOT = { culture = egyptian_arabic }
 		location = { culture = egyptian_arabic }
 	}
-	
+
 	mean_time_to_happen = { months = 900 }
-	
+
 	option = {
 		name ="EVTOPTAMYTH.20"
 		wealth = -10
@@ -1089,7 +1109,7 @@ character_event = {
 				}
 			}
 		}
-	}	
+	}
 	option = {
 		name ="EVTOPTBMYTH.20"
 		piety = 10
@@ -1100,9 +1120,9 @@ character_event = {
 	desc ="EVTDESCMYTH.21"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.21"
 		wealth = -10
@@ -1114,7 +1134,7 @@ character_event = {
 					id = MYTH.23
 					days = 14
 				}
-			}	
+			}
 		}
 	}
 	option = {
@@ -1129,13 +1149,13 @@ character_event = {
 	desc ="EVTDESCMYTH.22"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.22"
 		wealth = 300
-	}		
+	}
 }
 
 province_event = {
@@ -1145,7 +1165,7 @@ province_event = {
 	border = GFX_event_normal_frame_war
 
 	is_triggered_only = yes
-	
+
 	immediate = {
 		create_character = {
 			random_traits = no
@@ -1171,7 +1191,7 @@ province_event = {
 			trait = brave
 			give_nickname = nick_ozymandias
 		}
-		
+
 		new_character = {
 			create_title = {
 				tier = DUKE
@@ -1182,14 +1202,14 @@ province_event = {
 				name = "Mummy Host"
 				holder = THIS
 			}
-			
+
 			spawn_unit = {
 				province = ROOT
 				home = ROOT
 				owner = THIS
 				leader = THIS
 				match_character = THIS
-				match_mult = 0.6
+				match_mult = 0.8
 				troops = {
 					archers = { 6 6 }
 					light_cavalry = { 3 3 }
@@ -1199,7 +1219,7 @@ province_event = {
 				}
 				attrition = 1.0
 			}
-			
+
 			create_character = {
 				random_traits = yes
 				dynasty = none
@@ -1230,7 +1250,7 @@ province_event = {
 					}
 				}
 			}
-			
+
 			create_character = {
 				random_traits = yes
 				dynasty = none
@@ -1261,7 +1281,7 @@ province_event = {
 					}
 				}
 			}
-			
+
 			# DoW on the province top liege
 			ROOT = {
 				owner = {
@@ -1280,7 +1300,7 @@ province_event = {
 				}
 			}
 		}
-		
+
 		owner = {
 			any_liege = { # Inform the lieges
 				character_event = {
@@ -1289,7 +1309,7 @@ province_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name = "EVTOPTAMYTH.23"
 	}
@@ -1299,16 +1319,16 @@ character_event = {
 	desc ="EVTDESCMYTH.24"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
-		trait = mummy 
+		trait = mummy
 		has_landed_title = k_egypt
 		age = 2000
 		NOT = {
 			has_nickname = nick_ozymandias
 		}
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.24"
 		give_nickname = nick_ozymandias
@@ -1319,16 +1339,16 @@ character_event = {
 	desc = "EVTDESCMYTH.25"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		trait = werewolf
 		trait = maimed
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.25"
 		remove_trait = maimed
@@ -1339,7 +1359,7 @@ character_event = {
 	desc = "EVTDESCMYTH.26"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		OR = {
 			trait = werewolf
@@ -1348,16 +1368,16 @@ character_event = {
 		}
 		trait = wounded
 	}
-	
+
 	mean_time_to_happen = {
 		months = 1
-		
+
 		modifier = {
 			factor = 5.0
 			trait = ghoul
 		}
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.26"
 		remove_trait = wounded
@@ -1368,18 +1388,18 @@ character_event = {
 	desc = "EVTDESCMYTH.27"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		trait = werewolf
 		any_courtier = {
 				host = { character = ROOT }
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 240
 	}
-	
+
 	immediate = {
 		random_courtier = {
 			limit = {
@@ -1391,7 +1411,7 @@ character_event = {
 			}
 		}
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.27"
 		vassal_opinion = {
@@ -1413,7 +1433,7 @@ character_event = {
 			}
 			50 = {
 				custom_tooltip = { text = coverup_successful }
-			}	
+			}
 		}
 	}
 }
@@ -1422,32 +1442,32 @@ character_event = {
 	desc = "EVTDESCMYTH.28"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		religion_group = muslim
 		higher_tier_than = DUKE
 	}
-	
+
 	mean_time_to_happen = {
 		months = 2400
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.28"
 		hidden_tooltip = {
 			random_list = {
 				50 = {
-					character_event = { 
-						id = MYTH.29  
+					character_event = {
+						id = MYTH.29
 						days = 45
 					}
 				}
 				50 = {
-					character_event = { 
-						id = MYTH.30  
+					character_event = {
+						id = MYTH.30
 						days = 30
 					}
-				}	
+				}
 			}
 		}
 		wealth = -50
@@ -1462,22 +1482,22 @@ character_event = {
 	desc = "EVTDESCMYTH.29"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.29"
 		hidden_tooltip = {
 			random_list = {
 				50 = {
-					character_event = { 
-						id = MYTH.29  
+					character_event = {
+						id = MYTH.29
 						days = 45
 					}
 				}
 				50 = {
-					character_event = { 
-						id = MYTH.30  
+					character_event = {
+						id = MYTH.30
 						days = 30
 					}
 				}
@@ -1497,7 +1517,7 @@ character_event = {
 	border = GFX_event_normal_frame_war
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.30"
 		activate_title = { title = d_solomon_legion status = yes }
@@ -1537,7 +1557,7 @@ character_event = {
 	desc = "EVTDESCMYTH.31"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		trait = djinn
 		NOT = { trait = novice_mage }
@@ -1545,7 +1565,7 @@ character_event = {
 		NOT = { trait = veteran_wizard }
 		NOT = { trait = arcane_master }
 	}
-	
+
 	option = {
 		name = "EVTOPTAMYTH.31"
 		random_list = {
@@ -1617,49 +1637,49 @@ character_event = {
 	desc = "EVTDESCMYTH.32"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		trait = immortal
-		OR = {			
-			trait = ill 
-			trait = pneumonic 
-			trait = has_tuberculosis 
-			trait = has_typhoid_fever 
-			trait = has_typhus 
-			trait = has_bubonic_plague 
-			trait = has_measles 
+		OR = {
+			trait = ill
+			trait = pneumonic
+			trait = has_tuberculosis
+			trait = has_typhoid_fever
+			trait = has_typhus
+			trait = has_bubonic_plague
+			trait = has_measles
 			trait = has_small_pox
 			trait = infirm
 			trait = wounded
-			trait = maimed 			
+			trait = maimed
 			trait = syphilitic
 			trait = leper
 		}
 
 	}
-	
-	weight_multiplier  = { 
+
+	weight_multiplier  = {
 		days = 1
-		
+
 		modifier = {
 			factor = 10.0
 			trait = ghoul
 		}
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.32"
-			remove_trait = ill 
-			remove_trait = pneumonic 
-			remove_trait = has_tuberculosis 
-			remove_trait = has_typhoid_fever 
-			remove_trait = has_typhus 
-			remove_trait = has_bubonic_plague 
-			remove_trait = has_measles 
+			remove_trait = ill
+			remove_trait = pneumonic
+			remove_trait = has_tuberculosis
+			remove_trait = has_typhoid_fever
+			remove_trait = has_typhus
+			remove_trait = has_bubonic_plague
+			remove_trait = has_measles
 			remove_trait = has_small_pox
 			remove_trait = infirm
 			remove_trait = wounded
-			remove_trait = maimed 			
+			remove_trait = maimed
 			remove_trait = syphilitic
 			remove_trait = leper
 	}
@@ -1669,23 +1689,23 @@ character_event = {
 	desc = "EVTDESCMYTH.33"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		OR = {
 			trait = immortal
 		}
 		trait = incapable
 	}
-	
+
 	mean_time_to_happen = {
 		months = 6
-		
+
 		modifier = {
 			factor = 5.0
 			trait = ghoul
 		}
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.33"
 		remove_trait = incapable
@@ -1696,7 +1716,7 @@ character_event = {
 	desc = "EVTDESCMYTH.34"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		OR = {
 			father = { trait = giant }
@@ -1705,11 +1725,11 @@ character_event = {
 		NOT = { trait = giant }
 		NOT = { trait = half_giant }
 	}
-	
+
 	mean_time_to_happen = {
 		months = 5
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.34"
 		add_trait = half_giant
@@ -1720,7 +1740,7 @@ character_event = {
 	desc = "EVTDESCMYTH.35"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		OR = {
 			father = { trait = vampire }
@@ -1729,7 +1749,7 @@ character_event = {
 		NOT = { trait = vampire }
 		NOT = { trait = fledgling }
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.35"
 		add_trait = fledgling
@@ -1740,12 +1760,12 @@ character_event = {
 	desc = "EVTDESCMYTH.36"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		age = 16
 		trait = fledgling
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.36"
 		remove_trait = fledgling
@@ -1757,7 +1777,7 @@ character_event = {
 	desc = "EVTDESCMYTH.37"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		OR = {
 			father = { trait = werewolf }
@@ -1766,7 +1786,7 @@ character_event = {
 		NOT = { trait = werewolf }
 		NOT = { trait = pup }
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.37"
 		add_trait = pup
@@ -1777,12 +1797,12 @@ character_event = {
 	desc = "EVTDESCMYTH.38"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		age = 16
 		trait = pup
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.38"
 		remove_trait = pup
@@ -1794,16 +1814,16 @@ character_event = {
 	desc = "EVTDESCMYTH.39"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		NOT = { trait = son_of_solomon }
 		d_solomon_legion = {
 			liege = ROOT
 		}
 	}
-	
+
 	mean_time_to_happen = { months = 1 }
-	
+
 	option = {
 		name ="EVTOPTAMYTH.39"
 		add_trait = son_of_solomon
@@ -1814,7 +1834,7 @@ character_event = {
 	desc = "EVTDESCMYTH.40"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		is_ruler = yes
 		is_alive = yes
@@ -1823,9 +1843,9 @@ character_event = {
 			NOT = { liege = ROOT }
 		}
 	}
-	
+
 	mean_time_to_happen = { months = 1 }
-	
+
 	option = {
 		name ="EVTOPTAMYTH.40"
 		remove_trait = son_of_solomon
@@ -1836,25 +1856,25 @@ character_event = {
 	desc = "EVTDESCMYTH.41"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.41"
 		hidden_tooltip = {
 			random_list = {
 				50 = {
-					character_event = { 
-						id = MYTH.42  
+					character_event = {
+						id = MYTH.42
 						days = 45
 					}
 				}
 				50 = {
-					character_event = { 
-						id = MYTH.43  
+					character_event = {
+						id = MYTH.43
 						days = 30
 					}
-				}	
+				}
 			}
 		}
 		wealth = -50
@@ -1870,22 +1890,22 @@ character_event = {
 	desc = "EVTDESCMYTH.42"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.42"
 		hidden_tooltip = {
 			random_list = {
 				50 = {
-					character_event = { 
-						id = MYTH.42  
+					character_event = {
+						id = MYTH.42
 						days = 45
 					}
 				}
 				50 = {
-					character_event = { 
-						id = MYTH.43  
+					character_event = {
+						id = MYTH.43
 						days = 30
 					}
 				}
@@ -1904,9 +1924,9 @@ character_event = {
 	desc = "EVTDESCMYTH.43"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.43"
 		add_trait = philosopher_stone
@@ -1918,9 +1938,9 @@ character_event = {
 	desc = "EVTDESCMYTH.44"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.44"
 		random_demesne_province = {
@@ -1933,11 +1953,11 @@ character_event = {
 	desc ="EVTDESCMYTH.45"
 	picture = GFX_evt_jewish_market
 	border = GFX_event_normal_frame_religion
-	
+
 	is_triggered_only = yes
-	
+
 	hide_from = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.45"
 		wealth = -50
@@ -1950,15 +1970,15 @@ narrative_event = {
 	title = "EVTNAMEMYTH.46"
 	desc = "EVTDESCMYTH.46"
 	major = yes
-	
+
 	picture = GFX_evt_shadow
-	
+
 	hide_from = yes
-	
+
 	only_playable = yes
 	only_men = yes
 	min_age = 16
-	
+
 	trigger = {
 		OR = {
 			e_vampire = { has_holder = yes }
@@ -1971,11 +1991,11 @@ narrative_event = {
 			NOT = { num_of_settlements = 5 }
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		months = 12
 	}
-	
+
 	immediate = {
 		activate_title = { title = d_helsing status = yes }
 		create_character = {
@@ -2126,7 +2146,7 @@ narrative_event = {
 			}
 		}
 	}
-	
+
 
 	option = {
 		name = "EVTOPTAMYTH.46"
@@ -2137,14 +2157,14 @@ character_event = {
 	desc = "EVTDESCMYTH.47"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		top_liege = { has_landed_title = d_helsing }
 		NOT = { trait = monster_hunter }
 	}
-	
+
 	mean_time_to_happen = { months = 12 }
-	
+
 	option = {
 		name = "EVTOPTAMYTH.47"
 		add_trait = monster_hunter
@@ -2155,14 +2175,14 @@ character_event = {
 	desc = "EVTDESCMYTH.48"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		has_landed_title = e_vampire
 		NOT = { succession = seniority }
 	}
-	
+
 	mean_time_to_happen = { months = 1 }
-	
+
 	option = {
 		name = "EVTOPTAMYTH.48"
 		e_vampire = {
@@ -2177,13 +2197,13 @@ character_event = {
 	desc = "EVTDESCMYTH.49"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.49"
 		prestige = 50
-		FROM = { 
+		FROM = {
 			character_event = {
 				id = "MYTH.50"
 				days = 5
@@ -2205,7 +2225,7 @@ character_event = {
 		name = "EVTOPTBMYTH.49"
 		prestige = -100
 		random = {
-			chance = 50 	
+			chance = 50
 			add_trait = craven
 		}
 		vassal_opinion = {
@@ -2214,7 +2234,7 @@ character_event = {
 					multiplier = 2
 					months = 36
 				}
-		FROM = { 
+		FROM = {
 			character_event = {
 				id = "MYTH.51"
 				days = 5
@@ -2239,12 +2259,12 @@ character_event = {
 	desc = "EVTDESCMYTH.50"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.50"
-		FROM = { 
+		FROM = {
 			character_event = {
 				id = "MYTH.52"
 				days = 14
@@ -2257,9 +2277,9 @@ character_event = {
 	desc = "EVTDESCMYTH.51"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.51"
 	}
@@ -2270,9 +2290,9 @@ character_event = {
 	desc = "EVTDESCMYTH.52"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.52"
 		if = {
@@ -2422,9 +2442,9 @@ character_event = {
 	desc = "EVTDESCMYTH.53"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.53"
 		FROM = {
@@ -2438,9 +2458,9 @@ character_event = {
 	desc = "EVTDESCMYTH.54"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.54"
 		if = {
@@ -2590,9 +2610,9 @@ character_event = {
 	desc = "EVTDESCMYTH.55"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.55"
 		if = {
@@ -2742,9 +2762,9 @@ character_event = {
 	desc = "EVTDESCMYTH.56"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.56"
 		prestige = 50
@@ -2766,9 +2786,9 @@ character_event = {
 	desc = "EVTDESCMYTH.57"
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "EVTOPTAMYTH.57"
 	}
@@ -2778,7 +2798,11 @@ character_event = {
 	desc = "EVTDESCMYTH.58"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
+	# No god childs
+	ai = no
+	is_triggered_only = yes
+
 	trigger = {
 		AND = {
 			father = { trait = god }
@@ -2787,7 +2811,7 @@ character_event = {
 		NOT = { trait = god }
 		NOT = { trait = demi-god }
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.58"
 		add_trait = god
@@ -2798,7 +2822,7 @@ character_event = {
 	desc = "EVTDESCMYTH.59"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		OR = {
 			father = { trait = god }
@@ -2813,7 +2837,7 @@ character_event = {
 		NOT = { trait = god }
 		NOT = { trait = demi-god }
 	}
-	
+
 	option = {
 		name ="EVTOPTAMYTH.59"
 		add_trait = demi_god
@@ -2824,9 +2848,9 @@ character_event = {
 	desc = "EVTDESCMYTH.60"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.60"
 	}
@@ -2836,9 +2860,9 @@ character_event = {
 	desc = "EVTDESCMYTH.61"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.61"
 		FROM = {
@@ -2854,9 +2878,9 @@ character_event = {
 	desc = "EVTDESCMYTH.62"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.62"
 		character_event = {
@@ -2881,9 +2905,9 @@ character_event = {
 	desc = "EVTDESCMYTH.63"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.63"
 		character_event = {
@@ -2901,9 +2925,9 @@ character_event = {
 	desc = "EVTDESCMYTH.64"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.64"
 		hidden_tooltip = {
@@ -2923,7 +2947,7 @@ character_event = {
 					death = { death_reason = death_oxen }
 				}
 			}
-		}			
+		}
 	}
 }
 character_event = {
@@ -2931,9 +2955,9 @@ character_event = {
 	desc = "EVTDESCMYTH.65"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.65"
 		hidden_tooltip = {
@@ -2953,7 +2977,7 @@ character_event = {
 					death = { death_reason = death_battle }
 				}
 			}
-		}			
+		}
 	}
 	option = {
 		name ="EVTOPTBMYTH.65"
@@ -2967,9 +2991,9 @@ character_event = {
 	desc = "EVTDESCMYTH.66"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.66"
 		hidden_tooltip = {
@@ -2989,7 +3013,7 @@ character_event = {
 					death = { death_reason = death_dragon }
 				}
 			}
-		}			
+		}
 	}
 	option = {
 		name ="EVTOPTBMYTH.66"
@@ -3003,9 +3027,9 @@ character_event = {
 	desc = "EVTDESCMYTH.67"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.67"
 		hidden_tooltip = {
@@ -3025,7 +3049,7 @@ character_event = {
 					death = { death_reason = death_dragon }
 				}
 			}
-		}			
+		}
 	}
 	option = {
 		name ="EVTOPTBMYTH.67"
@@ -3039,9 +3063,9 @@ character_event = {
 	desc = "EVTDESCMYTH.68"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.68"
 		add_character_modifier = {
@@ -3057,9 +3081,9 @@ character_event = {
 	desc = "EVTDESCMYTH.69"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.69"
 		add_character_modifier = {
@@ -3075,9 +3099,9 @@ character_event = {
 	desc = "EVTDESCMYTH.70"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.70"
 		character_event = {
@@ -3095,9 +3119,9 @@ character_event = {
 	desc = "EVTDESCMYTH.71"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.71"
 		hidden_tooltip = {
@@ -3117,7 +3141,7 @@ character_event = {
 					death = { death_reason = death_gorgon }
 				}
 			}
-		}			
+		}
 	}
 	option = {
 		name ="EVTOPTBMYTH.71"
@@ -3131,9 +3155,9 @@ character_event = {
 	desc = "EVTDESCMYTH.72"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.72"
 		add_character_modifier = {
@@ -3149,9 +3173,9 @@ character_event = {
 	desc = "EVTDESCMYTH.73"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.73"
 		add_character_modifier = {
@@ -3167,9 +3191,9 @@ character_event = {
 	desc = "EVTDESCMYTH.74"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name ="EVTOPTAMYTH.74"
 		impregnate = FROM
@@ -3181,11 +3205,11 @@ character_event = {
 	desc = "EVTDESCMYTH.75"
 	picture = GFX_evt_crusaders
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = { has_landed_title = e_olympus }
-	
+
 	mean_time_to_happen = { years = 300 }
-	
+
 	option = {
 		name ="EVTOPTAMYTH.75"
 		random_playable_ruler = {
@@ -3207,10 +3231,10 @@ character_event = {
 	desc = "EVTDESCMYTH.76"
 	picture = GFX_evt_courtiers_talking
 	border = GFX_event_normal_frame_war
-	
+
 	trigger = {
 		ai = yes
-		NOT = { trait = vampire } 
+		NOT = { trait = vampire }
 		NOT = { trait = werewolf }
 		NOT = { trait = ghoul }
 		OR = {
@@ -3219,10 +3243,10 @@ character_event = {
 			consort = { trait = vampire }
 		}
 	}
-	
-	weight_multiplier  = { 
+
+	weight_multiplier  = {
 		days = 360
-		
+
  		modifier = {
 			factor = 10000
 			NOT = {
@@ -3240,36 +3264,36 @@ character_event = {
 		modifier = {
 			factor = 0.8
 			trait = possessed
-		}	
+		}
 		modifier = {
 			factor = 0.8
 			trait = cynical
-		}	
+		}
 		modifier = {
 			factor = 0.8
 			trait = greedy
-		}	
+		}
 		modifier = {
 			factor = 10
-			trait = zealous 
-		}	
+			trait = zealous
+		}
 		modifier = {
 			factor = 1.2
-			trait = hedonist  
-		}	
-		
+			trait = hedonist
+		}
+
 		modifier = {
 			factor = 0.2
 			trait = syphilitic
-		}	
+		}
 		modifier = {
 			factor = 0.2
 			trait = leper
-		}	
+		}
 		modifier = {
 			factor = 0.8
 			trait = ill
-		}	
+		}
 		modifier = {
 			factor = 0.2
 			trait = has_tuberculosis
@@ -3289,75 +3313,79 @@ character_event = {
 		modifier = {
 			factor = 0.2
 			trait = has_measles
-		}		
+		}
 		modifier = {
 			factor = 0.2
 			trait = has_small_pox
-		}		
-		
-		
+		}
+
+
 	} # mean time
-	
+
 	option = {
-		name = "EVTOPTAMYTH.76"	
+		name = "EVTOPTAMYTH.76"
 		random_list = {
 			50 = { add_ambition = obj_become_vampire }
 			50 = { add_ambition = obj_become_ghoul }
 		}
 		if = {
-			limit = { 
-				liege = { trait = vampire }        
-				NOT = { spouse = { trait = vampire } } 
-				NOT = { consort = { trait = vampire } } 
+			limit = {
+				liege = { trait = vampire }
+				NOT = { spouse = { trait = vampire } }
+				NOT = { consort = { trait = vampire } }
 			}
 			liege = { character_event = { id = MYTH.17 days = 64 } }
 		}
 		if = {
-			limit = { spouse = { trait = vampire } }    
+			limit = { spouse = { trait = vampire } }
 			spouse = { character_event = { id = MYTH.17 days = 18 } }
 		}
 		if = {
-			limit = { 
-				consort = { trait = vampire } }   
-				NOT = { spouse = { trait = vampire } } 
-			}			
+			limit = {
+				consort = { trait = vampire } }
+				NOT = { spouse = { trait = vampire } }
+			}
 			consort = { character_event = { id = MYTH.17 days = 18 } }
 		}
-		
+
 	}
 }
-# This number/position is haunted. For some reason, despite of lot of trials and errors, event under number 77 never runs. 
+# This number/position is haunted. For some reason, despite of lot of trials and errors, event under number 77 never runs.
 # Even when I renumbered it to 1077, it didn't run. It only run after I made its copy under number 84.
 character_event = {
 	id = MYTH.77
 	desc = "EVTDESCMYTH.77"
 	picture = GFX_evt_plague_doctor
 
+	# No zombies
+	ai = no
+	is_triggered_only = yes
+
 	trigger = {
 		any_vassal = {
 			trait = vampire
 		}
 	}
-	
-	weight_multiplier  = { 
+
+	weight_multiplier  = {
 		days = 1
 	}
 
 	option = {
-		name = "EVTOPTAMYTH.77"	
+		name = "EVTOPTAMYTH.77"
 
 		opinion = {
 			modifier = bloody_monster
-			who = { 
+			who = {
 				random_vassal = {
 					limit = { trait = vampire }
 				}
 			}
-		}	
-		
+		}
+
 	}
 }
-# become ghoul 
+# become ghoul
 character_event = {
 	id = MYTH.78
 	desc = "EVTDESCMYTH.78"
@@ -3366,14 +3394,14 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		FROM = { trait = vampire } 
+		FROM = { trait = vampire }
 		NOT = { trait = vampire }
 		NOT = { trait = werewolf }
 		NOT = { has_opinion_modifier = { who = FROM modifier = opinion_my_ghoul } }
 		NOT = { has_character_flag = flag_ghoul_has_master }
-		
+
 	}
-	
+
 	immediate = {
 		add_trait = ghoul
 		remove_opinion = {
@@ -3383,9 +3411,9 @@ character_event = {
 		opinion = {
 			modifier = opinion_my_ghoul
 			who = FROM
-		}	
+		}
 		set_character_flag = flag_ghoul_has_master
-		remove_character_modifier = ghoul_without_master	
+		remove_character_modifier = ghoul_without_master
 		FROM = {
 			change_variable = { which = "ghouls_count" value = 1 }
 		}
@@ -3409,8 +3437,8 @@ character_event = {
 
 	option = {
 		name = "EVTOPTAMYTH.79"
-		                       
-		ai_chance = { 
+
+		ai_chance = {
 			factor = 1
 			modifier = {
 				factor = 4
@@ -3419,9 +3447,9 @@ character_event = {
 			modifier = {
 				factor = 15
 				trait = impaler
-			}			 
+			}
 		}
-		custom_tooltip = { text = TYRANTTOOLTIP10 }                       
+		custom_tooltip = { text = TYRANTTOOLTIP10 }
 		hidden_tooltip = {
 			if = {
 				limit = {
@@ -3588,7 +3616,7 @@ character_event = {
 					add_trait = tyrant2
 				}
 			}
-		} 
+		}
 		random_list = {
 			20 = { change_learning = 1 }
 			20 = { change_diplomacy = 1 }
@@ -3596,7 +3624,7 @@ character_event = {
 			20 = { change_stewardship = 1 }
 			20 = { change_intrigue = 1 }
 		}
-		
+
 		FROM = {
 			death = {
 				death_reason = death_dungeon
@@ -3606,11 +3634,11 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTBMYTH.79"
-		trigger = { 
-			FROM = { NOT = { has_character_flag = flag_ghoul_has_master } } 
+		trigger = {
+			FROM = { NOT = { has_character_flag = flag_ghoul_has_master } }
 			FROM = { NOT = { trait = vampire } }
-			FROM = { NOT = { trait = werewolf } } 
-			NOT = { check_variable = { which ="ghouls_count" value = 5 } } 
+			FROM = { NOT = { trait = werewolf } }
+			NOT = { check_variable = { which ="ghouls_count" value = 5 } }
 		}
 		ai_chance = { factor = 10 }
 		FROM = {
@@ -3620,12 +3648,12 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTCMYTH.79"
-		trigger = { 
+		trigger = {
 			FROM = { NOT = { trait = vampire } }
 			FROM = { NOT = { trait = werewolf } }
 		}
-		ai_chance = { 
-			factor = 1 
+		ai_chance = {
+			factor = 1
 		  modifier = {
 		  	factor = 200
 	  		NOT = {       # no heir
@@ -3662,8 +3690,8 @@ character_event = {
 	option = {
 		name = "EVTOPTAMYTH.80"
 		trigger = {
-			FROM = { 
-				trait = ghoul 
+			FROM = {
+				trait = ghoul
 				has_opinion_modifier = {
 					modifier = opinion_my_ghoul
 					who = ROOT
@@ -3678,12 +3706,12 @@ character_event = {
 	# embrace
 	option = {
 		name = "EVTOPTBMYTH.80"
-		trigger = { 
+		trigger = {
 			FROM = { NOT = { trait = vampire }    }
 			FROM = { NOT = { trait = werewolf }   }
 		}
-		ai_chance = { 
-			factor = 1 
+		ai_chance = {
+			factor = 1
 		  modifier = {
 		  	factor = 200
 	  		NOT = {       # no heir
@@ -3692,7 +3720,7 @@ character_event = {
 					}
 				}
 			}
-		}		
+		}
 		piety = -50
 		FROM = {
 			character_event = { id = MYTH.84 }
@@ -3726,7 +3754,7 @@ character_event = {
 		remove_opinion = {
 			modifier = opinion_my_ghoul
 			who = FROM
-		}	
+		}
 		clr_character_flag = flag_ghoul_has_master
 		add_character_modifier = {
 			name = ghoul_without_master
@@ -3734,7 +3762,7 @@ character_event = {
 		}
 		FROM = {
 			change_variable = { which = "ghouls_count" value = -1 }
-		}		
+		}
 		cancel_ambition = yes
 		random_list = {
 			40 = { add_trait = stressed }
@@ -3762,17 +3790,17 @@ character_event = {
 		name = "EVTOPTAMYTH.82"
 		remove_opinion = {
 			modifier = opinion_my_ghoul
-		}	
+		}
 		remove_trait = ghoul
 		remove_character_modifier = ghoul_without_master
 		health = -2
 		random_list = {
 			 5 = { add_trait = lunatic }
 			95 = { }
-		}		
+		}
 	}
 }
-# unfed ghoul seeks you as a new master     
+# unfed ghoul seeks you as a new master
 character_event = {
 	id = MYTH.83
 	desc = "EVTDESCMYTH.83"
@@ -3818,7 +3846,7 @@ character_event = {
 	option = {
 		ai_chance = { factor = 1 }
 		name = "EVTOPTBMYTH.83"
-	}	
+	}
 }
 # become vampire
 character_event = {
@@ -3831,10 +3859,10 @@ character_event = {
 	trigger = {
 		FROM = { trait = vampire }
 	}
-	
+
 	immediate = {
 		add_trait = vampire
-		dynasty = FROM	
+		dynasty = FROM
 		IF = {
 			limit = { FROM = { is_female = yes } }
 			set_mother = FROM
@@ -3855,18 +3883,18 @@ character_event = {
 		remove_opinion = {
 			modifier = opinion_my_ghoul
 			who = FROM
-		}	
+		}
 		if {
 			limit = { trait = ghoul }
 			change_variable = { which = "ghouls_count" value = -1 }
-		}		
-		remove_trait = ghoul				
-		clr_character_flag = flag_ghoul_has_master		
-		remove_character_modifier = ghoul_without_master		
+		}
+		remove_trait = ghoul
+		clr_character_flag = flag_ghoul_has_master
+		remove_character_modifier = ghoul_without_master
 	}
 
 	option = {
-		name = "EVTOPTAMYTH.84"	
+		name = "EVTOPTAMYTH.84"
 		add_trait = vampire
 	}
 }
@@ -3876,46 +3904,55 @@ character_event = {
 	desc = "EVTDESCMYTH.85"
 	picture = GFX_evt_plague_doctor
 
-	trigger = {         
-		NOT = { OR = { trait = vampire trait = werewolf } }
+	trigger = {
+		NOT = { OR = {
+			trait = vampire
+			trait = werewolf
+		} }
 		any_vassal = {
-			OR = { trait = vampire trait = werewolf }
+			OR = {
+				trait = vampire
+				trait = werewolf
+			}
 			NOT = {
 				has_opinion_modifier = {
 					modifier = knows_this_bloody_monster
 					who = ROOT
-				}				
+				}
 			}
 		}
 	}
-	
-	weight_multiplier  = { 
+
+	weight_multiplier  = {
 		days = 1
 	}
 
 	option = {
-		name = "EVTOPTAMYTH.85"	
-		
+		name = "EVTOPTAMYTH.85"
+
 		random_vassal = {
-			limit = { 
-				OR = { trait = vampire trait = werewolf }
+			limit = {
+				OR = {
+					trait = vampire
+					trait = werewolf
+				}
 				NOT = {
 					has_opinion_modifier = {
 						modifier = knows_this_bloody_monster
 						who = ROOT
-					}				
-				}		 
+					}
+				}
 			}
 			reverse_opinion = {
 				modifier = bloody_monster
 				who = ROOT
-			}	
+			}
 			opinion = {
 				modifier = knows_this_bloody_monster
-				who = ROOT			
-			}			
+				who = ROOT
+			}
 		}
-		
+
 	}
 }
 
@@ -4025,7 +4062,7 @@ character_event = {
 		piety = -50
 		add_trait = excommunicated
 	}
-}                  
+}
 
 # old tomb with a vampire discovered
 character_event = {
@@ -4033,26 +4070,26 @@ character_event = {
 	desc = "EVTDESCMYTH.87"
 	picture = GFX_evt_pagan
 
-	trigger = {         
+	trigger = {
 		#ai = no    # DEBUG
 		is_ruler = yes
 		NOT = { trait = vampire }
 		NOT = { trait = werewolf }
 	}
-	
+
 	mean_time_to_happen = {
 		months = 12000
 	}
 
 	option = {
-		name = "EVTOPTAMYTH.87"	
-		character_event = { id = MYTH.88 }		
+		name = "EVTOPTAMYTH.87"
+		character_event = { id = MYTH.88 }
 	}
 	option = {
-		name = "EVTOPTBMYTH.87"	
-		
-		random = { chance = 20 add_trait = craven } 
-	}	
+		name = "EVTOPTBMYTH.87"
+
+		random = { chance = 20 add_trait = craven }
+	}
 }
 # inside the tomb...
 character_event = {
@@ -4062,15 +4099,15 @@ character_event = {
 
   is_triggered_only = yes
 
-	trigger = {         
+	trigger = {
 	}
-	
+
 	immediate = {
 		random {
 			chance = 2
 			if = {
 				limit = { NOT = { has_global_flag = helen_of_troy }  NOT = { has_global_flag = character_chosen }  }
-			
+
 				create_character = {
 					random_traits = yes
 					dynasty = 1043007
@@ -4082,28 +4119,28 @@ character_event = {
 					attributes = {
 					}
 					trait = vampire
-					trait = fair 
+					trait = fair
 					trait = elusive_shadow
 					name = "Helen"
 				}
 				new_character = {
-					activate_title = { title = k_troy status = yes }	
+					activate_title = { title = k_troy status = yes }
 					k_troy = {
 						grant_title = PREV
-					}				
+					}
 					move_character = ROOT
 				}
-				
+
 				set_global_flag = helen_of_troy
 				set_global_flag = character_chosen
-			}	
+			}
 		}
-		
+
 		# last character, general
 		if = {
 			limit = { NOT = { has_global_flag = character_chosen } }
 			clr_global_flag = character_chosen
-			
+
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
@@ -4111,32 +4148,32 @@ character_event = {
 			}
 			new_character = {
 				move_character = ROOT
-			}			
-			
+			}
+
 		}
 	}
 
 	option = {
-		name = "EVTOPTAMYTH.88"	
-		
-		random_list = { 
-			40 = { 			
+		name = "EVTOPTAMYTH.88"
+
+		random_list = {
+			40 = {
 				death = {
 					death_reason = death_murder
 					killer = PREV
-				} 
-			} 
+				}
+			}
 			40 = { new_character = {	character_event = { id = MYTH.89 }	}   }
 		}
-	}	
+	}
 
 	option = {
-		name = "EVTOPTBMYTH.88"	
-		
+		name = "EVTOPTBMYTH.88"
+
 		new_character = {
 			character_event = { id = MYTH.89 }
-		}               	
-		
+		}
+
 	}
 
 }
@@ -4148,27 +4185,38 @@ character_event = {
 
   is_triggered_only = yes
 
-	trigger = {         
+	trigger = {
+		NOT = {
+			OR = {
+				trait = god
+				trait = ghoul
+				trait = mummy
+				trait = djinn
+				trait = zombie
+				trait = werewolf
+				trait = vampire
+			}
+		}
 	}
 
 	option = {
-		name = "EVTOPTAMYTH.89"	
-		
+		name = "EVTOPTAMYTH.89"
+
 		FROM = { character_event = { id = MYTH.84 } }
-	}	
+	}
 
 }
-# vampire ravages countriside
+# vampire ravages countryside
 character_event = {
 	id = MYTH.90
 	desc = "EVTDESCMYTH.90"
 	picture = GFX_evt_bloody_man
 
-	
 
-	trigger = {  
-		trait = vampire    
-		is_ruler = yes   
+
+	trigger = {
+		trait = vampire
+		is_ruler = yes
 	}
 
   mean_time_to_happen = {
@@ -4180,7 +4228,7 @@ character_event = {
 		modifier = {
 			trait = kind
 			factor = 4
-		}		
+		}
 		modifier = {
 			NOT = { trait = wroth }
 			factor = 10
@@ -4188,42 +4236,42 @@ character_event = {
 		modifier = {
 			NOT = { trait = impaler }
 			factor = 4
-		}				
+		}
 	}
 
 	option = {
-		name = "EVTOPTAMYTH.90"	
-		
+		name = "EVTOPTAMYTH.90"
+
 		random_list = {
 			15 = { character_event = { id = MYTH.18 } }   # revolt
-			 1 = { add_trait = lunatic } 
+			 1 = { add_trait = lunatic }
  			 3 = { add_trait = impaler }
 			 3 = { add_trait = cruel }
 			 3 = { add_trait = wroth }
  			 3 = { remove_trait = impaler }
 			 3 = { remove_trait = cruel }
-			 3 = { remove_trait = wroth }				 			  
+			 3 = { remove_trait = wroth }
 			66 = { }
 		}
-		
+
 		remove_trait = kind
-			      
-	}	
-	
+
+	}
+
 	option = {
-		name = "EVTOPTBMYTH.90"	
-		
+		name = "EVTOPTBMYTH.90"
+
 		random_list = {
 			15 = { character_event = { id = MYTH.18 } }   # revolt
-			 1 = { add_trait = lunatic } 
+			 1 = { add_trait = lunatic }
  			 3 = { add_trait = impaler }
 			 3 = { add_trait = cruel }
-			 3 = { add_trait = wroth }			  
+			 3 = { add_trait = wroth }
 			75 = { }
 		}
-		
+
 		remove_trait = kind
-	}	
+	}
 
 }
 
@@ -4233,7 +4281,7 @@ character_event = {
 	desc = "EVTDESCMYTH.91"
 	picture = GFX_evt_plague_doctor
 
-	trigger = {  
+	trigger = {
 		NOT = { trait = immortal }
 		OR = {
 			trait = vampire
@@ -4246,22 +4294,22 @@ character_event = {
 		}
 	}
 
-	weight_multiplier  = { 
+	weight_multiplier  = {
 		days = 1
 	}
 
 	option = {
-		name = "EVTOPTAMYTH.91"	
-		add_trait = immortal			      
-	}	
+		name = "EVTOPTAMYTH.91"
+		add_trait = immortal
+	}
 }
 character_event = {
 	id = MYTH.92
 	desc = "EVTDESCMYTH.92"
 	picture = GFX_evt_plague_doctor
 
-	trigger = {  
-		trait = immortal 
+	trigger = {
+		trait = immortal
 		NOT = { OR = {
 			trait = vampire
 			trait = warewolf
@@ -4273,12 +4321,12 @@ character_event = {
 		} }
 	}
 
-	weight_multiplier  = { 
+	weight_multiplier  = {
 		days = 1
 	}
 
 	option = {
-		name = "EVTOPTAMYTH.92"	
-		remove_trait = immortal			      
-	}	
+		name = "EVTOPTAMYTH.92"
+		remove_trait = immortal
+	}
 }
