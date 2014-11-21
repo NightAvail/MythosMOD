@@ -765,7 +765,6 @@ vassal_decisions = {
 			add_trait = werewolf
 			prisoner = no
 			FROM = {
-
 				prestige = 50
 			}
 		}
