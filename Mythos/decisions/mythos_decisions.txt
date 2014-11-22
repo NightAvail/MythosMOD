@@ -789,7 +789,7 @@ vassal_decisions = {
 		}
 	}
 
-	# Djinn can turn child into djinn.
+	# Djinn can turn spouse/child into djinn.
 	djinn_make_child_djinn = {
 		from_potential = {
 			trait = djinn
@@ -800,7 +800,7 @@ vassal_decisions = {
 			OR = {
 				father = { character = FROM }
 				mother = { character = FROM }
-				#is_main_spouse = yes
+				spouse = { character = FROM }
 			}
 
 			NOT = { trait = vampire }
