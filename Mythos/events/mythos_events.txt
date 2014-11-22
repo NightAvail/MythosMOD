@@ -1189,6 +1189,7 @@ province_event = {
 			trait = proud
 			trait = zealous
 			trait = brave
+			trait = immortal
 
 			immortal = yes
 			give_nickname = nick_ozymandias
@@ -4364,6 +4365,11 @@ character_event = {
 
 	option = {
 		name = "EVTOPTAMYTH.92"
+
+		remove_trait novice_mage
+		remove_trait veteran_wizard
+		remove_trait arcane_master
+
 		add_trait = eldritch_scholar
 	}
 }
@@ -4387,6 +4393,11 @@ character_event = {
 
 	option = {
 		name = "EVTOPTAMYTH.92"
+
+		remove_trait novice_mage
+		remove_trait eldritch_scholar
+		remove_trait arcane_master
+
 		add_trait = veteran_wizard
 	}
 }
@@ -4410,6 +4421,11 @@ character_event = {
 
 	option = {
 		name = "EVTOPTAMYTH.92"
+
+		remove_trait novice_mage
+		remove_trait eldritch_scholar
+		remove_trait veteran_wizard
+
 		add_trait = arcane_master
 	}
 }
