@@ -101,8 +101,6 @@ d_druidic_reformed;The Circle of Druids;;;;;;;;;;;;;x
 ARCH_DRUID;Arch Druid;;;;;;;;;;;;;x
 ARCH_DRUID_FOA;Eldest of the Druids;;;;;;;;;;;;;x
 job_spiritual_druidic;Seer;;;;;;;;;;;;;x
-djinn_make_child_djinn;Make [Root.GetTitledFirstName] a djinn!;;;;;;;;;;;;;x
-djinn_make_child_djinn_desc;Make [Root.GetTitledFirstName] a djinn like you!;;;;;;;;;;;;;x
 turn_prisoner_werewolf;Turn [Root.GetTitledFirstName];;;;;;;;;;;;;x
 turn_prisoner_werewolf_desc;Imbue [Root.GetTitledFirstName] with the blood of the wolf.;;;;;;;;;;;;;x
 vampire_visits_dungeon;Visit [Root.GetTitledFirstName] in the dungeon..;;;;;;;;;;;;;x
@@ -121,8 +119,8 @@ cast_aura;Cast Aura;;;;;;;;;;;;;x
 cast_aura_desc;Cast an aura around yourself to make others more agreeable.;;;;;;;;;;;;;x
 expel_satanists;Expel Satanists;;;;;;;;;;;;;x
 expel_satanists_desc;Purge all satan-worshippers from the realm.;;;;;;;;;;;;;x
-ghoul_without_master;No master;;;;;;;;;;;;;x
-ghoul_without_master_desc;Has no vampire master;;;;;;;;;;;;;x
+ghoul_without_master;No master;;;;;;;;;;;;;x 
+ghoul_without_master_desc;Has no vampire master;;;;;;;;;;;;;x 
 open_vampire_dungeon_menu;Visit the dungeon...;;;;;;;;;;;;;x
 open_vampire_dungeon_menu_desc;Vampire visits the dungeon.;;;;;;;;;;;;;x
 restart_laws;pokus;;;;;;;;;;;;;x
@@ -522,7 +520,4 @@ EVTOPTBMYTH.90;Men are animals.;;;;;;;;;;;;;x
 EVTNAMEMYTH.91;Gain CK2+ immortal trait;;;;;;;;;;;;;x
 EVTDESCMYTH.91;It is good to be immortal!;;;;;;;;;;;;;x
 EVTOPTAMYTH.91;Indeed!;;;;;;;;;;;;;x
-EVTNAMEMYTH.92;Always learning;;;;;;;;;;;;;x
-EVTDESCMYTH.92;Your Djinn knowledge in magic increases as you live your immortal life!;;;;;;;;;;;;;x
-EVTOPTAMYTH.92;I feel more powerful!;;;;;;;;;;;;;x
 OF_TROY;Troy;;;;;;;;;;;;;x

@@ -62,10 +62,10 @@
 	holder = 159110
 }
 840.1.1={
-	holder = 268290
+	holder = 159109
 }
-983.1.1 = {
-	holder = 1000256102
+867.1.2={
+	holder = 268290
 }
 1065.1.1={
 	holder = 6362 #Cadwgan ap Meurig
@@ -77,14 +77,14 @@
 	holder = 6376  #Iestyn ap Gwrgant
 }
 1090.1.1={
-	liege=d_gloucester
+	liege=k_england
 }
 1090.1.1={
 	holder=138455 #Robert Fitzhamon
 }
 1107.3.1={
 	holder=138457 #Mabel Fitzhamon
-}
+} 
 1112.1.1={
 	holder=203036 #Robert FitzHenry
 }

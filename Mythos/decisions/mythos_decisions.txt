@@ -17,7 +17,7 @@ decisions = {
 #		}
 #		effect = { set_character_flag = flag_vampire_dungeon_menu_open }
 #	}
-
+	
 	close_vampire_ghoul_menu = {
 		is_high_prio = yes
 		potential = {
@@ -34,7 +34,7 @@ decisions = {
 			NOT = { has_character_flag = flag_vampire_ghoul_menu_open }
 		}
 		effect = { set_character_flag = flag_vampire_ghoul_menu_open }
-	}
+	}	
 
 	brew_love_potion = {
 		potential = {
@@ -47,34 +47,34 @@ decisions = {
 				trait = arcane_master
 			}
 		}
-
+		
 		allow = {
 			wealth = 50
 		}
-
+		
 		effect = {
 			wealth = -50
 			custom_tooltip = { text = preparations_begin }
 			hidden_tooltip = {
 				if = {
-					limit = {
+					limit = { 
 						OR = {
 							trait = veteran_wizard
 							trait = arcane_master
 						}
 					}
-					character_event = {
+					character_event = { 
 					id = MYTH.7
 					days = 7
 					}
 				}
 				if = {
-					limit = {
+					limit = { 
 						trait = eldritch_scholar
 						}
 					random_list = {
 						80 = {
-							character_event = {
+							character_event = { 
 							id = MYTH.7
 							days = 7
 							}
@@ -88,12 +88,12 @@ decisions = {
 					}
 				}
 				if = {
-					limit = {
+					limit = { 
 						trait = novice_mage
 						}
 					random_list = {
 						60 = {
-							character_event = {
+							character_event = { 
 							id = MYTH.7
 							days = 7
 							}
@@ -109,7 +109,7 @@ decisions = {
 			}
 		}
 	}
-
+	
 	attempt_alchemy = {
 		potential = {
 			prisoner = no
@@ -120,11 +120,11 @@ decisions = {
 				trait = arcane_master
 			}
 		}
-
+		
 		allow = {
 			wealth = 100
 		}
-
+		
 		effect = {
 			wealth = -100
 			custom_tooltip = { text = preparations_begin }
@@ -133,7 +133,7 @@ decisions = {
 					limit = { trait = arcane_master }
 					random_list = {
 						75 = {
-							character_event = {
+							character_event = { 
 							id = MYTH.9
 							days = 7
 							}
@@ -157,7 +157,7 @@ decisions = {
 					}
 				}
 				if = {
-					limit = {
+					limit = { 
 						OR = {
 							trait = veteran_wizard
 							trait = eldritch_scholar
@@ -165,7 +165,7 @@ decisions = {
 					}
 					random_list = {
 						60 = {
-							character_event = {
+							character_event = { 
 							id = MYTH.9
 							days = 7
 							}
@@ -185,7 +185,7 @@ decisions = {
 			}
 		}
 	}
-
+	
 	summon_ethereal_army = {
 		potential = {
 			prisoner = no
@@ -195,12 +195,12 @@ decisions = {
 				trait = arcane_master
 			}
 		}
-
+		
 		allow = {
 			wealth = 500
 			war = yes
 		}
-
+		
 		effect = {
 			wealth = -500
 			custom_tooltip = { text = preparations_begin }
@@ -209,7 +209,7 @@ decisions = {
 					limit = { trait = arcane_master }
 					random_list = {
 						80 = {
-							character_event = {
+							character_event = { 
 							id = MYTH.11
 							days = 7
 							}
@@ -226,7 +226,7 @@ decisions = {
 					limit = { trait = veteran_wizard }
 					random_list = {
 						60 = {
-							character_event = {
+							character_event = { 
 							id = MYTH.11
 							days = 7
 							}
@@ -256,11 +256,11 @@ decisions = {
 				trait = arcane_master
 			}
 		}
-
+		
 		allow = {
 			wealth = 100
 		}
-
+		
 		effect = {
 			wealth = -100
 			custom_tooltip = { text = spell_cast }
@@ -296,7 +296,7 @@ decisions = {
 	convert_populace = {
 		potential = {
 			prisoner = no
-			any_demesne_province = {
+			any_demesne_province = { 
 				NOT = { religion = ROOT }
 			}
 			NOT = { has_character_modifier = cast_spell }
@@ -305,11 +305,11 @@ decisions = {
 				trait = arcane_master
 			}
 		}
-
+		
 		allow = {
 			piety = 200
 		}
-
+		
 		effect = {
 			piety = -200
 			custom_tooltip = { text = spell_cast }
@@ -414,22 +414,22 @@ decisions = {
 			if {
 				limit = { primary_title = { crownlaw_title = { has_law = centralization_0 } } }
 				primary_title = { crownlaw_title = { grant_title = 268291 revoke_law = centralization_5 add_law = centralization_0 grant_title = ROOT } }
-			} if {
+			} if {				
 				limit = { primary_title = { crownlaw_title = { has_law = centralization_1 } } }
 				primary_title = { crownlaw_title = { grant_title = 268291 revoke_law = centralization_5 add_law = centralization_1 grant_title = ROOT } }
-} if {
+} if {								
 				limit = { primary_title = { crownlaw_title = { has_law = centralization_2 } } }
-				primary_title = { crownlaw_title = { grant_title = 268291 revoke_law = centralization_5 add_law = centralization_2 grant_title = ROOT } }
+				primary_title = { crownlaw_title = { grant_title = 268291 revoke_law = centralization_5 add_law = centralization_2 grant_title = ROOT } }				
 } if {
 				limit = { primary_title = { crownlaw_title = { has_law = centralization_3 } } }
-				primary_title = { crownlaw_title = { grant_title = 268291 revoke_law = centralization_5 add_law = centralization_3 grant_title = ROOT } }
+				primary_title = { crownlaw_title = { grant_title = 268291 revoke_law = centralization_5 add_law = centralization_3 grant_title = ROOT } }				
 } if {
 				limit = { primary_title = { crownlaw_title = { has_law = centralization_4 } } }
-				primary_title = { crownlaw_title = { grant_title = 268291 revoke_law = centralization_5 add_law = centralization_4 grant_title = ROOT } }
+				primary_title = { crownlaw_title = { grant_title = 268291 revoke_law = centralization_5 add_law = centralization_4 grant_title = ROOT } }		
 } if {
 				limit = { primary_title = { crownlaw_title = { has_law = centralization_5 } } }
-				primary_title = { crownlaw_title = { grant_title = 268291 revoke_law = centralization_1 add_law = centralization_5 grant_title = ROOT } }
-			}
+				primary_title = { crownlaw_title = { grant_title = 268291 revoke_law = centralization_1 add_law = centralization_5 grant_title = ROOT } }								
+			} 
 			#remove_character_modifier = expelled_satanists
 			#custom_tooltip = {
 			#	text = satanists_are_welcome
@@ -437,7 +437,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
 				factor = 0.1 # Less likely to do it
 			}
@@ -446,10 +446,10 @@ decisions = {
 				trait = zealous
 			}
 		}
-	}
+	}	
 	welcome_satanists = {
 		potential = {
-			NOT = {
+			NOT = { 
 				religion = satanist
 			}
 			has_character_modifier = expelled_satanists
@@ -465,7 +465,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
 				factor = 0.1 # Less likely to do it
 			}
@@ -475,7 +475,7 @@ decisions = {
 			}
 		}
 	}
-
+	
 	expel_satanists = {
 		potential = {
 			OR = {
@@ -483,8 +483,8 @@ decisions = {
 				religion_group = muslim
 				religion_group = zoroastrian_group
 				religion_group = jewish_group
-			}
-			NOT = {
+			}	
+			NOT = { 
 				religion = satanist
 				has_character_modifier = expelled_satanist
 				any_realm_province = { religion = jewish }
@@ -511,7 +511,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
 				factor = 0.001 # Less likely to do it
 			}
@@ -627,7 +627,7 @@ decisions = {
 				duration = -1
 			}
 			hidden_tooltip = {
-				character_event = {
+				character_event = { 
 					id = MYTH.62
 					days = 5
 				}
@@ -651,23 +651,10 @@ decisions = {
 }
 
 vassal_decisions = {
-	# Djinn grants immortality to subject
-	# (Too powerful???)
-	#djinn_grant_immortality = {
-	#	from_potential = {
-	#		AND = {
-	#			ai = no
-	#			trait = djinn
-	#		}
-	#	}
-	#}
-	# End Djinn
-
 	vampire_interact_ghouls = {
 		is_high_prio = yes
 		from_potential = {
 			trait = vampire
-
 			OR = {
 				has_character_flag = flag_vampire_ghoul_menu_open
 				ai = yes
@@ -691,13 +678,12 @@ vassal_decisions = {
 		#is_high_prio = yes
 		from_potential = {
 			trait = vampire
-
 			#OR = {
 			#	ai = yes
 			#	has_character_flag = flag_vampire_dungeon_menu_open
 			#}
 		}
-
+	
 		potential = {
 			prisoner = yes
 			NOT = { trait = vampire }
@@ -715,7 +701,7 @@ vassal_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
 				factor = 0
 				opinion = { who = FROM value = 40 }
@@ -742,7 +728,7 @@ vassal_decisions = {
 		from_potential = {
 			trait = werewolf
 		}
-
+	
 		potential = {
 			prisoner = yes
 			NOT = { trait = vampire }
@@ -753,10 +739,11 @@ vassal_decisions = {
 			prisoner = yes
 		}
 		effect = {
-
+			
 			add_trait = werewolf
 			prisoner = no
 			FROM = {
+				
 				prestige = 50
 			}
 		}
@@ -765,7 +752,7 @@ vassal_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-
+			
 			modifier = {
 				factor = 0
 				opinion = { who = FROM value = 40 }
@@ -789,45 +776,4 @@ vassal_decisions = {
 		}
 	}
 
-	# Djinn can turn child into djinn.
-	djinn_make_child_djinn = {
-		from_potential = {
-			trait = djinn
-		}
-
-		# Potential conditions
-		potential = {
-			OR = {
-				father = { character = FROM }
-				mother = { character = FROM }
-				#is_main_spouse = yes
-			}
-
-			NOT = { trait = vampire }
-			NOT = { trait = werewolf }
-			NOT = { trait = djinn }
-
-			liege = { character = FROM }
-		}
-
-		# What is required by user.
-		allow = {
-		}
-
-		effect = {
-			add_trait = djinn
-			prisoner = no
-			FROM = {
-				prestige = 50
-			}
-		}
-
-		revoke_allowed = {
-			always = no
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
 }

@@ -5,8 +5,8 @@ title = c_nordland
 
 # Settlements
 max_settlements = 2
-b_rost = tribal
-
+b_rost = castle
+b_bjerkestrand = castle
 #b_kabelvag = temple
 #b_bodo = city
 #b_narvik = castle
@@ -19,15 +19,6 @@ culture = norse
 religion = jotnar
 
 # History
-769.1.1 = { culture = jotunn }
 867.1.2 = { culture = jotunn }
-
-800.1.1 = {
-	b_rost = tb_shipyard_1
-}
-1000.1.1 = {
-	b_rost = castle
-	b_rost = ca_shipyard_1
-}
 1066.1.1 = { culture = norwegian }
 1080.1.1 = { religion = catholic }
