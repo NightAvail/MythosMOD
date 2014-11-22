@@ -20,6 +20,7 @@ mummy;Mummy;;;;;;;;;;;;;x
 mummy_desc;Entombed and preserved long ago by the Egyptians, some force has brought this corpse back to life.;;;;;;;;;;;;;x
 djinn;Djinn;;;;;;;;;;;;;x
 djinn_desc;Said to be made from fire as men were made from clay, these beings have many powers, though they usually do not meddle in human affairs.;;;;;;;;;;;;;x
+immortal;Immortal;Immortel;Unsterblich;;Immortal;;;;;;;;;x;;
 god;God;;;;;;;;;;;;;x
 god_desc;This character is imbued with divine power. Immortal and powerful beyond most human imagination, these beings are literal gods among men.;;;;;;;;;;;;;x
 demi_god;Demi-god;;;;;;;;;;;;;x
@@ -119,8 +120,8 @@ cast_aura;Cast Aura;;;;;;;;;;;;;x
 cast_aura_desc;Cast an aura around yourself to make others more agreeable.;;;;;;;;;;;;;x
 expel_satanists;Expel Satanists;;;;;;;;;;;;;x
 expel_satanists_desc;Purge all satan-worshippers from the realm.;;;;;;;;;;;;;x
-ghoul_without_master;No master;;;;;;;;;;;;;x 
-ghoul_without_master_desc;Has no vampire master;;;;;;;;;;;;;x 
+ghoul_without_master;No master;;;;;;;;;;;;;x
+ghoul_without_master_desc;Has no vampire master;;;;;;;;;;;;;x
 open_vampire_dungeon_menu;Visit the dungeon...;;;;;;;;;;;;;x
 open_vampire_dungeon_menu_desc;Vampire visits the dungeon.;;;;;;;;;;;;;x
 restart_laws;pokus;;;;;;;;;;;;;x

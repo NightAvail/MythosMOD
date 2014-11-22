@@ -16,13 +16,13 @@ vampire = {
 	muslim_opinion = -40
 	jewish_opinion = -40
 	general_opinion = -10
-	
+
 	fertility = -50
 	diplomacy = -2
 	martial = 2
 	intrigue = 4
 	learning = 1
-	
+
 	ai_rationality = 20
 	ai_honor = -20
 }
@@ -43,11 +43,11 @@ ghoul = {
 	muslim_opinion = -20
 	jewish_opinion = -20
 	general_opinion = -5
-	
+
 	fertility = -1
 	martial = 1
 	intrigue = 2
-	
+
 	ai_rationality = 10
 	ai_honor = -10
 }
@@ -67,7 +67,7 @@ werewolf = {
 	christian_opinion = -30
 	muslim_opinion = -30
 	jewish_opinion = -30
-	
+
 	diplomacy = -1
 	martial = 4
 	intrigue = -1
@@ -81,13 +81,13 @@ giant = {
 	christian_opinion = -20
 	muslim_opinion = -20
 	jewish_opinion = -20
-	
+
 	health = 2
 	diplomacy = -2
 	intrigue = -2
 	learning = -2
 	martial = 8
-	
+
 	ai_rationality = -10
 
 }
@@ -107,7 +107,7 @@ fledgling = {
 half_giant = {
 
 	opposites = { giant }
-	
+
 	inherit_chance = 75
 	martial = 3
 	diplomacy = -1
@@ -117,36 +117,36 @@ half_giant = {
 god = {
 
 	opposites = { demi_god }
-	
+
 	immortal = yes
-	
+
 	same_opinion = 20
-	
+
 	health = 10
 	martial = 10
 	diplomacy = 10
 	stewardship = 10
 	intrigue = 10
 	learning = 15
-	
+
 	monthly_character_prestige = 10
 }
 
 demi_god = {
 
 	opposites = { god }
-	
+
 	inherit_chance = 75
-	
+
 	same_opinion = 30
-	
+
 	health = 5
 	martial = 5
 	diplomacy = 3
 	stewardship = 3
 	intrigue = 3
 	learning = 5
-	
+
 	monthly_character_prestige = 1
 }
 
@@ -161,14 +161,14 @@ zombie = {
 	same_opinion = 1000
 	general_opinion = -200
 
-	
+
 	health = -1
 	fertility = -10
 	diplomacy = -10
 	intrigue = -10
 	learning = -10
 	stewardship = -10
-	
+
 	ai_rationality = -100
 	ai_honor = -100
 	ai_ambition = 100
@@ -184,12 +184,12 @@ mummy = {
 	christian_opinion = -100
 	muslim_opinion = -100
 	jewish_opinion = -100
-	
+
 	fertility = -2
 	diplomacy = -4
 	intrigue = 2
 	learning = 5
-	
+
 	ai_rationality = 20
 	ai_zeal = 20
 	ai_honor = -20
@@ -203,14 +203,19 @@ djinn = {
 	same_opinion = 20
 	christian_opinion = -50
 	church_opinion = -20
-	
+
 	diplomacy = 2
 	stewardship = 2
 	intrigue = 4
-	
+
 	ai_rationality = 20
 	ai_zeal = 20
 	ai_honor = -20
+}
+
+immortal = {
+	immortal = yes
+	customizer = no
 }
 
 #EDUCATIONAL TRAITS
@@ -218,7 +223,7 @@ djinn = {
 novice_mage = {
 	potential = { religion_group = pagan_group }
 	education = yes
-	
+
 	learning = 2
 	church_opinion = -5
 }
@@ -226,7 +231,7 @@ novice_mage = {
 eldritch_scholar = {
 	potential = { religion_group = pagan_group }
 	education = yes
-	
+
 	learning = 3
 	diplomacy = 1
 	stewardship = 1
@@ -239,7 +244,7 @@ eldritch_scholar = {
 veteran_wizard = {
 	potential = { religion_group = pagan_group }
 	education = yes
-	
+
 	learning = 6
 	diplomacy = 2
 	stewardship = 2
@@ -252,7 +257,7 @@ veteran_wizard = {
 arcane_master = {
 	potential = { religion_group = pagan_group }
 	education = yes
-	
+
 	learning = 10
 	diplomacy = 4
 	stewardship = 4
@@ -282,7 +287,7 @@ monster_hunter = {
 
 	lifestyle = yes
 
-	opposites = { 
+	opposites = {
 		vampire
 		werewolf
 		zombie
@@ -295,4 +300,3 @@ monster_hunter = {
 	monthly_character_piety = 0.8
 	church_opinion = 30
 }
-

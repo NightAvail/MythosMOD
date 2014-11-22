@@ -37,6 +37,23 @@
 # 47-51: Estates
 # 52-55: Moods
 
+# Bankruptcy
+negative_money = {
+	potential = {
+		is_ruler = yes
+	}
+
+	trigger = {
+		NOT = { wealth = 0 }
+	}
+
+	icon = 24
+
+	land_morale = -0.25
+
+	active = no
+}
+
 #Supernatural Long Reign Opinions
 opinion_supernatural_longreign_1 = {
 	potential = {
@@ -137,4 +154,3 @@ opinion_supernatural_longreign_8 = {
 	}
 	opinion = -50
 }
-
